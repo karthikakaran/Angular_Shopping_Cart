@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+            <table class="table table-condensed">
+                <tr style="background-color:white;">
+                    <td><b>Item</b></td>
+                    <td><b>Name</b></td>
+                    <td><b>Type</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Quantity</b></td>
+                </tr>
+                <tr ng-repeat="product in products">
+                  <td>{{product.Item}}</td>
+                  <td>{{product.Name}}</td>
+                  <td>{{product.Type}}</td>
+                  <td>{{product.Price}}</td>
+                  <td style="width:3%">
+                    <input ng-if="product.CostOfItem" type="number" ng-model="product.Quantity" />
+                    <input ng-if="!product.CostOfItem" type="number" min="0" max="100" ng-model="values[$index]"/>
+                  </td>
+                </tr>
+            </table>
+            <input type="button" value="Check Out" class="btn btn-primary btn-lg" style="float : right;" ng-click="checkout()"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+            <table class="table table-condensed">
+                <tr style="background-color:white;">
+                    <td><b>Item</b></td>
+                    <td><b>Name</b></td>
+                    <td><b>Type</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Quantity</b></td>
+                    <td><b>Total Cost</b></td>
+                    <td><b>Delete</b></td>
+                </tr>
+                <tr ng-repeat="product in products" ng-if="product.CostOfItem">
+                  <td>{{product.Item}}</td>
+                  <td>{{product.Name}}</td>
+                  <td>{{product.Type}}</td>
+                  <td>{{product.Price}}</td>
+                  <td><input type="number" ng-model='product.Quantity' ng-change="changeQuantity($index)"/></td>
+                  <td>{{product.CostOfItem}}</td>
+                  <td><input type="button" value="Delete" class="btn btn-primary btn-lg" ng-click="delete($index)"/></td>
+                </tr>
+            </table>
+            <div style="padding-left:65%"><pre>Total : {{totalAmt}}</pre><div>
+            <div style="float:right;">
+              <input type="button" value="Change Item in Cart" class="btn btn-primary btn-lg" ng-click="changeItemInCart()"/>&nbsp;&nbsp;
+              <input type="button" value="Pay" class="btn btn-primary btn-lg" style="float : right;" ng-click="message()"/>
+            </div>
+        </div>
+    </div>
+</div>

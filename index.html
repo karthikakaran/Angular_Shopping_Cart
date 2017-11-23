@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="controller.js"></script>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<style>
+h1{
+    padding-top: 40px;
+}
+body{	background-color: #cccccc;	}
+</style>
+</head>
+<body>
+   <div class="container" ng-controller="mainController">
+   <center><h1><strong><font color="white" size="60px">Shopping Cart</font><strong></h1></center>
+</body>
+<div ng-view></div>
+</html>
