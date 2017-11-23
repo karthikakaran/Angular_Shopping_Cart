@@ -74,5 +74,4 @@ myapp.controller('checkoutCartController', function($scope, $http, $window, $loc
   $scope.message = function() {
     $scope.totalAmt == 0 ? alert('No items selected!') : alert('PAID! Thank You!');
   }
-
 });
