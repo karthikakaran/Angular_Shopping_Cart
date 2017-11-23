@@ -1,2 +1,2 @@
 # Angular_Shopping_Cart
-Angular_Shopping_Cart
+Run from Firefox
